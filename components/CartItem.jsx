@@ -5,18 +5,14 @@
 import { useShoppingCart } from 'use-shopping-cart'
 import {FaPlus,FaMinus} from 'react-icons/fa'
 import {CiCircleRemove} from 'react-icons/ci'
-import Image from 'next/image'
-import { urlFor } from '@/app/lib/sanity'
+
 
 const CartItem = ({item}) => {
     const {incrementItem,decrementItem,removeItem} =useShoppingCart()
     
   return (
     <div className='flex w-full justify-between items-center h-[120px] border-b mb-4'>
-         <div className='w-[110px] h-[110px] relative'>
-            <Image src={urlFor(item.images[0]).url()} fill priority sizes='(max-width:110px) 110px,110px' className=' object-contain' alt=''/>
-
-        </div>
+         
         
         {/* */}
        <div className='w-full max-w-[180px] flex flex-col justify-center gap-4'>
